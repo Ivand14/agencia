@@ -4,6 +4,7 @@ let menu=document.querySelector('.enlaces')
 let contenedorNav=document.querySelector('.contenedorNav')
 let hamburguer=document.querySelector('.hamburguer')
 
+//Para que el menu se active de transparente a color solido cuando hacemos scroll
 
 function menus(){
     let desplazamiento= window.scrollY;
@@ -21,6 +22,7 @@ function menus(){
 
 window.addEventListener('scroll', menus)
 
+//Para que funcione el loader
 
 window.addEventListener('load',function(){
     let loading=document.querySelector('#loader')
@@ -29,15 +31,12 @@ window.addEventListener('load',function(){
     body.style.display='flex,column'
     menus();
 
-
 })
 
-
+//para que funcione el menu hamburguesa 
 
 hamburguer.addEventListener('click',()=>{
     menu.classList.toggle('mostrar');
-
-
 })
 
 window.addEventListener('click',e=>{
