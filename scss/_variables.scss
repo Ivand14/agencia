@@ -1,0 +1,15 @@
+
+@mixin centrado-column{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin centrado-row{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+$color-principal:#aec3b0;
