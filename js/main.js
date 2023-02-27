@@ -86,7 +86,7 @@ function cargarFotos(fotosSeleccionadas){
         div.innerHTML=`
                         <div class="cont-work" id='${servicios.id}'>
                             <div class="imgWork">
-                                <img src=${servicios.img}>
+                                <img src=${servicios.img} alt=${servicios.titulo}>
                             </div>
 
                             <div class="textos-work">

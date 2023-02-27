@@ -314,7 +314,8 @@ body p {
   display: flex;
   justify-content: center;
   align-items: center;
-  justify-content: space-evenly;
+  flex-wrap: wrap;
+  justify-content: space-between;
   flex-wrap: wrap;
   width: 70vw;
   margin: 2rem;
