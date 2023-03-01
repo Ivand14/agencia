@@ -192,7 +192,7 @@
 .equipo{
     @include centrado-column;
     padding: 3rem;
-    width: 100vw;
+    max-width: 100vw;
     overflow: hidden;
 }
 
@@ -204,45 +204,90 @@
     padding: 3rem;
     margin-top: 5rem;
     cursor: pointer;
+    height: auto
 }
 
 
 .contenido-card{
     @include centrado-column;
-    transition: ease .4s;
-}
-
-.people{
-    img{
-        height: 42rem;
-        width: 28rem;
-        box-shadow: 0 0 10px #000;
-        transition: ease-in .4s;
-        z-index: 2;
-    }
-}
-
-.people:hover{
-    img{
-        height: 42rem;
-        width: 28rem;
-        box-shadow: 0 0 6px #000;
-        transform: scale(1.0369) translate(-1rem,-5rem);
-    }
-}
-
-
-.textPeople{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     position: relative;
-    bottom: 6rem;
-    padding: 1.3rem;
-    background-color: antiquewhite;
-    width: 28rem;
-    z-index: -1;
+    overflow: hidden;
+    box-shadow: 0 0 20px #000;
+    height: auto;
+    
+
+    &:after,&::before{
+        content: "";
+        position: absolute;
+        background-color: #03071e91;
+        height: 100%;
+        width: 100%;
+        transition: all .4s;
+    }
+
+    &:after{
+        left: -100%;
+    }
+
+    &::before{
+        left: 100%;
+    }
+
+    &:hover::after,&:hover::before{
+        left: 0rem;
+    }
+
+    .people{
+        img{
+            height: 42rem;
+            width: 28rem;
+            transition: ease-in .4s;
+        }
+    }
+    
+    .people:hover{
+        img{
+            height: 42rem;
+            width: 28rem;
+            box-shadow: 0 0 16px #000;
+            transform: scale(1.0369);
+        } }
+
+    .textPeople{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        color: #000;
+        top: 0%;
+        padding: 1.3rem;
+        height: 100%;
+        width: 28rem;
+        z-index: 2;
+        opacity: 0;
+        transition: ease-in .4s;
+
+        &:hover{
+            opacity: 1;
+            // background-color: #03071e91;
+        }
+    }
+
+
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 //SERVICIOS
 
